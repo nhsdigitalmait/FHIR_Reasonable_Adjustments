@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    reasonable-adjustments:
+        ports:
+            - '4434:4434'
+        volumes:
+            - '/home/riro/Technical_Specialist_Folder/Docker/data:/home/service/data'
+        image: 'reasonable-adjustments:latest'

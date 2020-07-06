@@ -1,0 +1,13 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="__MESSAGEID__"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/bundle"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="0"/>
+    <link>
+        <relation value="self"/>
+        <!-- note entity encoding in url -->
+        <url value="https://__HOST____FULL_CONTEXT_PATH__"/>
+    </link>
+</Bundle>

@@ -1,0 +1,187 @@
+# Simulator rule definition file for ITK Testbench
+#  FHIR VALIDATOR SERVER
+#	Chris Berry 08/08/2019 
+#
+BEGIN RESPONSES
+
+#NEW
+#Search
+notFound_Response						/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/successful_responses/NotFound_Trigger_NEMS.xml "200 OK"
+Conversion_Error_Response					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/operation_outcomes/operation_outcome_200_IVP.xml "400 Bad Request"
+HTTP_From_MISSING_Response					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/operation_outcomes/operation_outcome_400_MOIH_From.xml "400 Missing Or Invalid Header"
+HTTP_To_MISSING_Response					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/operation_outcomes/operation_outcome_400_MOIH_To.xml "400 Missing Or Invalid Header"
+HTTP_Authorization_MISSING_Response			/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/operation_outcomes/operation_outcome_400_MOIH_Auth.xml "400 Missing Or Invalid Header"
+
+#PreExistingServerResponses
+operation_outcome_all_other_requests					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/operation_outcomes/operation_outcome_all_other_requests.xml 404
+operation_outcome_unsupported_verb_404					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/operation_outcomes/operation_outcome_unsupported_verb.xml 404
+Operation_Outcome_400					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/operation_outcome_400_IP.xml "400 Bad Request"
+Operation_Outcome_404					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/operation_outcome_404_NRF.xml "404 Not Found"
+Operation_Outcome_500					/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/operation_outcome_500_ISE.xml "500 Internal Server Error"
+#####ReasonableAdjustments####
+RARecord_Read_Fail	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/RARecord_Read_Fail.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+Read_Flag_Response_0	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Read_Flag_Response_0.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+Read_Flag_Response_1	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Read_Flag_Response_1.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+Read_Flag_Response_2	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Read_Flag_Response_2.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+Consent_Read_1	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Consent_Read_1.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+ConditionList_Read	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/ConditionList_Read.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+ConditionList_Read_Multiple	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/ConditionList_Read_Multiple.xml 200 WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+Create_Consent_Response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Create_Consent_Response.xml "201 Created" WITH_HTTP_HEADERS ( Location : "https://clinicals.spineservices.nhs.uk/STU3/Consent/__MESSAGEID__/_history/__VERSIONID__" Date : "__RFC822TIMESTAMP__" ETag : "W/\"__VERSIONID__\"" Last-Modified : "__TIMESTAMP__" )
+Create_Flag_Response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Create_Consent_Response.xml "201 Created" WITH_HTTP_HEADERS ( Location : "https://clinicals.spineservices.nhs.uk/STU3/Consent/__MESSAGEID__/_history/__VERSIONID__" Date : "__RFC822TIMESTAMP__" ETag : "W/\"__VERSIONID__\"" Last-Modified : "__TIMESTAMP__" )
+duplicate_record_response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/duplicate_record_response.xml "422 DUPLICATE_REJECTED" 
+Create_List_Condition_Response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Create_List_Condition_Response.xml "201 Created" WITH_HTTP_HEADERS ( Location : "https://clinicals.spineservices.nhs.uk/STU3/Consent/__MESSAGEID__/_history/__VERSIONID__" Date : "__RFC822TIMESTAMP__" ETag : "W/\"__VERSIONID__\"" Last-Modified : "__TIMESTAMP__" )
+Create_List_Condition_Existing_Response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Create_List_Condition_Existing_Response.xml "201 Created" WITH_HTTP_HEADERS ( Location : "https://clinicals.spineservices.nhs.uk/STU3/Consent/__MESSAGEID__/_history/__VERSIONID__" Date : "__RFC822TIMESTAMP__" ETag : "W/\"__VERSIONID__\"" Last-Modified : "__TIMESTAMP__" )
+Not_Modified_response class:uk.nhs.digital.mait.tkwx.tk.internalservices.rules.routingactor.ackextension.SendEmptyResponse	"304 Not modified" WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+No_If-Match_response class:uk.nhs.digital.mait.tkwx.tk.internalservices.rules.routingactor.ackextension.SendEmptyResponse	"412 Precondition Failed" WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+Update_Flag_response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Update_Flag_response.xml "200 OK" WITH_HTTP_HEADERS ( Date : "__RFC822TIMESTAMP__" ETag : "W/\"__VERSIONID__\"" Last-Modified : "__TIMESTAMP__" )
+Update_Consent_response	/home/riro/TKW-5.0.5/TKW/config/FHIR_ReasonableAdjustments/simulator_config/ReasonableAdjustments/Update_Consent_Response.xml "200 OK" WITH_HTTP_HEADERS ( Date : "__RFC822TIMESTAMP__" ETag : "W/\"__VERSIONID__\"" Last-Modified : "__TIMESTAMP__" )
+Concurrent_Update_response	class:uk.nhs.digital.mait.tkwx.tk.internalservices.rules.routingactor.ackextension.SendEmptyResponse	"409 Conflict" WITH_HTTP_HEADERS (  Date : "__RFC822TIMESTAMP__" )
+do_process	NONE	0
+END RESPONSES
+
+BEGIN SUBSTITUTIONS
+__MESSAGEID__	uuid
+__VERSIONID__	uuid
+__TIMESTAMP__	ISO8601datetime
+__REQUESTMESSAGEID__	Xpath /*/fhir:id/@value
+__LISTREQUESTMESSAGEID__	Xpath /fhir:List/fhir:contained[1]/fhir:Condition/fhir:id/@value
+__LISTREQUESTMESSAGEID2__	Xpath /fhir:List/fhir:contained[3]/fhir:Condition/fhir:id/@value
+__REQUESTVERSIONID__	Xpath /fhir:List/fhir:contained[1]/fhir:Condition/fhir:meta/fhir:versionId/@value
+__REQUESTVERSIONID2__	Xpath /fhir:List/fhir:contained[3]/fhir:Condition/fhir:meta/fhir:versionId/@value
+__REQUESTLASTUPDATEDTIMESTAMP__	Xpath /fhir:List/fhir:contained[1]/fhir:Condition/fhir:meta/fhir:lastUpdated/@value
+__REQUESTLASTUPDATEDTIMESTAMP2__	Xpath /fhir:List/fhir:contained[3]/fhir:Condition/fhir:meta/fhir:lastUpdated/@value
+__REQUESTPROVENANCEID__	Xpath /fhir:List/fhir:contained[2]/fhir:Provenance/fhir:id/@value
+__REQUESTPROVENANCEID2__	Xpath /fhir:List/fhir:contained[4]/fhir:Provenance/fhir:id/@value
+__REQUESTTIMESTAMP__	Xpath /fhir:List/fhir:date/@value
+__REQUESTDELETEDVERSIONTIMESTAMP__	Xpath /fhir:List/fhir:entry/fhir:date/@value
+__REQUESTDELETEDPROVENANCETIMESTAMP__	Xpath /fhir:List/fhir:entry/fhir:date/@value
+__RFC822TIMESTAMP__	RFC822datetime
+__NHSNUMBER_CONTEXT_PATH__ reg_exp context_path "^.*patient=([0-9]{10}).*$" "$1"
+__NHSNUMBER_VALUE__ 	Xpath /fhir:Consent/fhir:patient/fhir:reference/@value
+__FULL_CONTEXT_PATH__ reg_exp context_path "." "$0"
+__HOST__ reg_exp http_header Host "." "$0"
+
+
+END SUBSTITUTIONS
+
+# all the "match/contains" rules apply to the content by default to use eg the context path it must be specified as context_path
+BEGIN EXPRESSIONS
+
+HTTP_From_MISSING				http_header fromASID notmatches ^.+$
+HTTP_To_MISSING					http_header toASID notmatches ^.+$
+HTTP_Authorization_MISSING		http_header Authorization notmatches ^.+$
+Conversion_Error				xpathequals boolean(//fhirconversionfailure) true
+Conversion_Error				xpathequals boolean(//fhirconversionfailure) true
+#Errors via DocumentReference ID
+#PreExistingServer expresions
+EMPTY_CONTENT					matches ^$
+# must be before parameters check since coversion from json wont happen IF content-type is wrong
+INVALID_CONTENT_TYPE			http_header content-type matches ^.*(text.*|application\/[a-z]+[^+]*)$
+#
+#http header checks
+#
+EMPTY_ACCEPT					http_header accept notmatches ^.+$
+INVALID_ACCEPT					http_header accept notmatches ^.*application\/fhir\+(xml|json).*$
+#
+#####ReasonableAdjustments####
+CONSENT						context_path matches ^.*\/STU3\/Consent.*$
+LIST						context_path matches ^.*\/STU3\/List.*$
+FLAG						context_path matches ^.*\/STU3\/Flag.*$
+PATIENT9446363160_CP		context_path matches ^.*patient=9446363160.*$
+PATIENT9446363071_CP		context_path matches ^.*patient=9446363071.*$
+PATIENT9446362954_CP		context_path matches ^.*patient=9446362954.*$
+PATIENT9446362768_CP		context_path matches ^.*patient=9446362768.*$
+PATIENT9446363098_CP		context_path matches ^.*patient=9446363098.*$
+PATIENT9446362865_CP		context_path matches ^.*patient=9446362865.*$
+PATIENT9446362938_CP		context_path matches ^.*patient=9446362938.*$
+PATIENT9446362849_CP		context_path matches ^.*patient=9446362849.*$
+PATIENT9446362946_CP		context_path matches ^.*patient=9446362946.*$
+PATIENT9446362881_CP		context_path matches ^.*patient=9446362881.*$
+
+IFNONEMATCH					http_header If-None-Match matches ^.+$
+IFMODIFIEDSINCE				http_header If-Modified-Since matches ^.+$
+IFMATCH						http_header If-Match matches ^.+$
+
+PATIENT9450597316			xpathmatches /fhir:Consent/fhir:patient/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9450597316
+PATIENT9446363047			xpathmatches //fhir:Condition/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446363047
+PATIENT9446362989			xpathmatches /fhir:Consent/fhir:patient/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362989
+PATIENT9446363071			xpathmatches /fhir:Flag/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446363071
+PATIENT9446362954			xpathmatches /fhir:Flag/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362954
+PATIENT9446362865			xpathmatches /fhir:Consent/fhir:patient/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362865
+PATIENT9446362822			xpathmatches //fhir:Condition/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362822
+PATIENT9446363004			xpathmatches /fhir:Flag/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446363004
+PATIENT9446362768			xpathmatches /fhir:Flag/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362768
+PATIENT9446362806			xpathmatches //fhir:Condition/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362806
+PATIENT9446362873			xpathmatches /fhir:Flag/fhir:subject/fhir:reference/@value demographics.spineservices.nhs.uk/STU3/Patient/9446362873
+
+passthrough	Always
+dontpassthrough	Never
+#
+END EXPRESSIONS
+
+BEGIN RULE
+POST
+IF HTTP_From_MISSING				THEN	HTTP_From_MISSING_Response				ELSE NEXT
+IF HTTP_To_MISSING					THEN	HTTP_To_MISSING_Response				ELSE NEXT
+IF HTTP_Authorization_MISSING		THEN	HTTP_Authorization_MISSING_Response		ELSE NEXT
+IF Conversion_Error					THEN	Conversion_Error_Response				ELSE NEXT
+
+#####ReasonableAdjustments####
+IF CONSENT	AND PATIENT9450597316 THEN 	Create_Consent_Response					ELSE NEXT
+IF CONSENT 	AND PATIENT9446362989 THEN duplicate_record_response				ELSE NEXT
+IF LIST		AND PATIENT9446363047 THEN 	Create_List_Condition_Response			ELSE NEXT
+IF LIST		AND PATIENT9446362822 THEN 	Create_List_Condition_Existing_Response	ELSE NEXT
+IF LIST		AND PATIENT9446362806 THEN 	Operation_Outcome_500					ELSE NEXT
+IF FLAG		AND PATIENT9446363004 THEN 	Create_Flag_Response					ELSE NEXT
+
+IF passthrough THEN notFound_Response
+END RULE
+
+#=========================================================================================
+# Http methods no interactionid
+
+BEGIN RULE
+GET
+#
+#####ReasonableAdjustments####
+IF CONSENT	AND	PATIENT9446363160_CP					THEN 	RARecord_Read_Fail				ELSE NEXT
+IF CONSENT	AND	PATIENT9446363098_CP AND IFNONEMATCH	THEN 	Not_Modified_response			ELSE NEXT
+IF CONSENT AND PATIENT9446362865_CP 					THEN 	Consent_Read_1					ELSE NEXT
+IF CONSENT AND PATIENT9446362881_CP 					THEN 	Operation_Outcome_400			ELSE NEXT
+IF LIST AND PATIENT9446362938_CP					 	THEN 	ConditionList_Read				ELSE NEXT
+IF LIST AND PATIENT9446362849_CP 						THEN 	ConditionList_Read_Multiple		ELSE NEXT
+IF LIST AND PATIENT9446362946_CP 	AND IFMODIFIEDSINCE THEN 	Not_Modified_response			ELSE NEXT
+IF FLAG	AND	PATIENT9446363071_CP						THEN 	Read_Flag_Response_0			ELSE NEXT
+IF FLAG	AND	PATIENT9446362954_CP						THEN 	Read_Flag_Response_1			ELSE NEXT
+IF FLAG	AND	PATIENT9446362768_CP						THEN 	Read_Flag_Response_2			ELSE NEXT
+
+IF passthrough THEN notFound_Response
+END RULE
+
+BEGIN RULE
+PUT
+IF CONSENT AND PATIENT9446362865 			THEN Update_Consent_response 				ELSE NEXT
+#IF LIST AND PATIENT9446362938 				THEN Update_List_response 					ELSE NEXT
+IF FLAG AND PATIENT9446363071 				THEN Update_Flag_response 					ELSE NEXT
+IF FLAG AND PATIENT9446362954	AND	IFMATCH	THEN Concurrent_Update_response 			ELSE NEXT
+IF FLAG AND PATIENT9446362768				THEN No_If-Match_response 					ELSE NEXT
+IF FLAG AND PATIENT9446362873 				THEN Operation_Outcome_404 					ELSE NEXT
+IF passthrough THEN operation_outcome_unsupported_verb_404
+END RULE
+
+BEGIN RULE
+DELETE
+#IF passthrough THEN operation_outcome_all_other_requests
+IF passthrough THEN notFound_Response
+END RULE
+
+BEGIN RULE
+PATCH
+IF passthrough THEN operation_outcome_unsupported_verb_404
+END RULE
+
+BEGIN RULE
+OPTIONS
+IF passthrough THEN operation_outcome_unsupported_verb_404
+END RULE
+#=========================================================================================
